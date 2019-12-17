@@ -1,2 +1,2 @@
 # MPLS-SR
-IS-ISでSegmentRoutingを回したconfigたちの墓場
+ハッカソンで使用するconfigたち
