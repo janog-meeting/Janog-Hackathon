@@ -1,0 +1,22 @@
+hostname CE-B2
+!
+interface Loopback0
+ ipv4 address 192.0.2.2 255.255.255.255
+!
+interface MgmtEth0/0/CPU0/0
+ shutdown
+!
+! Change IF Gi1 >>> Gi0/0/0/0
+interface GigabitEthernet0/0/0/0
+ ipv4 address 10.102.0.6 255.255.255.252
+!
+router ospf 1
+ router-id 192.0.2.2
+ address-family ipv4 unicast
+ area 0
+  !
+  interface Loopback0
+  !
+  interface GigabitEthernet0/0/0/0
+!
+end
