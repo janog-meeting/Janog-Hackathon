@@ -40,13 +40,15 @@ def walk(host, oid, data, index):
 
 
 def cdpneighbor(IP):
-    data = [[], [], []]
+    data = [[], [], [], []]
     OID = ".1.3.6.1.4.1.9.9.23.1.2.1.1.6"
     walk(IP, OID, data, 0)
     OID = ".1.3.6.1.4.1.9.9.23.1.2.1.1.7"
     walk(IP, OID, data, 1)
     OID = ".1.3.6.1.4.1.9.9.23.1.2.1.1.8"
     walk(IP, OID, data, 2)
+    OID = ".1.3.6.1.4.1.9.9.23.1.2.1.1.9"
+    walk(IP, OID, data, 3)
     result = []
     for i in range(len(data[0])):
         result.append(
@@ -54,6 +56,7 @@ def cdpneighbor(IP):
                 "DST-HOST": data[0][i],
                 "SRC-IF": data[1][i],
                 "DST-MODEL": data[2][i]
+                "SRC-ICON": data[3][i]
             }
         )
     return result
