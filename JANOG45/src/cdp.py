@@ -56,7 +56,7 @@ def cdpneighbor(IP):
                 "DST-HOST": data[0][i],
                 "SRC-IF": data[1][i],
                 "DST-MODEL": data[2][i],
-                "SRC-ICON": data[3][i]
+                "DST-ICON": data[3][i]
             }
         )
     return result
