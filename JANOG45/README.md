@@ -14,6 +14,11 @@ http://go.drawthe.net/
 
 ## 実行方法
 
+### 必要なもの
+
+- Python 3.8
+- pipenv
+
 ### ライブラリのインストール
 
 ```bash
@@ -23,7 +28,7 @@ pipenv sync
 ### 実行
 
 ```bash
-pipenv run python -m src.main
+pipenv run main
 ```
 
 ### アウトプット
