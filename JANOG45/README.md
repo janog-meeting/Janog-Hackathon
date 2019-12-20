@@ -7,10 +7,7 @@ configからトポ図を生成するツール
 
 ## 完成参考URL
 
-https://github.com/cidrblock/drawthe.net
-
-http://go.drawthe.net/
-
+http://103.131.194.3:8082/
 
 ## 実行方法
 
