@@ -1,0 +1,4 @@
+connections:
+{% for connection in connections -%}
+  - { <<: *connection, endpoints: ["{{ connection[0] }}", "{{ connection[1] }}"] }
+{% endfor %}

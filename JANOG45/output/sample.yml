@@ -1,0 +1,13 @@
+connections:
+- { <<: *connection, endpoints: ["CE-A1:GigabitEthernet1", "R5"] }
+- { <<: *connection, endpoints: ["CE-A2:GigabitEthernet1", "R6"] }
+- { <<: *connection, endpoints: ["CE-B1:GigabitEthernet1", "R5"] }
+- { <<: *connection, endpoints: ["CE-B2:GigabitEthernet1", "R6"] }
+- { <<: *connection, endpoints: ["R1:GigabitEthernet0/0/0/4", "R5:GigabitEthernet0/0/0/0"] }
+- { <<: *connection, endpoints: ["R1:GigabitEthernet0/0/0/1", "R3:GigabitEthernet0/0/0/1"] }
+- { <<: *connection, endpoints: ["R1:GigabitEthernet0/0/0/0", "R2:GigabitEthernet0/0/0/0"] }
+- { <<: *connection, endpoints: ["R2:GigabitEthernet0/0/0/4", "R5:GigabitEthernet0/0/0/1"] }
+- { <<: *connection, endpoints: ["R2:GigabitEthernet0/0/0/1", "R4:GigabitEthernet0/0/0/1"] }
+- { <<: *connection, endpoints: ["R3:GigabitEthernet0/0/0/0", "R4:GigabitEthernet0/0/0/0"] }
+- { <<: *connection, endpoints: ["R3:GigabitEthernet0/0/0/4", "R6:GigabitEthernet0/0/0/0"] }
+- { <<: *connection, endpoints: ["R4:GigabitEthernet0/0/0/4", "R6:GigabitEthernet0/0/0/1"] }
