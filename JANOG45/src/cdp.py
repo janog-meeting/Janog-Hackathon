@@ -54,7 +54,7 @@ def cdpneighbor(IP):
         result.append(
             {
                 "DST-HOST": data[0][i],
-                "SRC-IF": data[1][i],
+                "DST-IF": data[1][i],
                 "DST-MODEL": data[2][i],
                 "DST-ICON": data[3][i]
             }
