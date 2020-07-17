@@ -1,0 +1,31 @@
+configure terminal
+hostname XRV_03
+int loopback0
+    ip address 3.3.3.3/32
+    no shut
+int MgmtEth0/0/CPU0/0
+    ip address 172.16.0.3/24
+    no shut
+int GigabitEthernet0/0/0/1
+    description TO_XRV_01_GigabitEthernet0/0/0/0
+    ip address 192.168.1.3/24
+    no shut
+int GigabitEthernet0/0/0/2
+    description TO_XRV_03_GigabitEthernet0/0/0/2
+    ip address 192.168.2.3/24
+    no shut
+    exit
+router ospf xrv3
+    area 0
+        int loopback 0
+        interface gigabitEthernet 0/0/0/1
+        interface gigabitEthernet 0/0/0/2
+        exit
+    exit
+exit
+crypto key generate rsa
+4096
+configure ter
+ssh server v2
+telnet ipv4 server max-servers 10
+end
